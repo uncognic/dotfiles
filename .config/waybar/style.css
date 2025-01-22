@@ -109,6 +109,27 @@
   /* No styles */
 }
 
+#mpd.stopped {
+
+}
+
+#mpd.paused {
+    background-color: rgb(142, 92, 0);
+    border-color:rgba(255, 166, 0, 0.716)
+}
+
+#mpd.playing {
+    background-color: #285577;
+    border-color: #4c7899;
+}
+
+#mpd {
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #cpu.warning {
     color: orange;
 }
