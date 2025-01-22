@@ -277,6 +277,7 @@ binds {
     Mod+D { spawn "wmenu-run"; }
     Mod+Shift+D { spawn "fuzzel"; }
     Super+Alt+L { spawn "swaylock"; }
+    Mod+L { spawn "swaylock" "-f" "-c" "000000"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -288,7 +289,8 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
     Mod+Shift+Q { close-window; }
     Mod+Left  { focus-column-left; }
     // Mod+Down  { focus-window-down; }
@@ -297,7 +299,7 @@ binds {
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    // Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
     // Mod+Ctrl+Down  { move-window-down; }
