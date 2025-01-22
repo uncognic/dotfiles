@@ -84,21 +84,30 @@
 }
 
 #battery.warning {
-    color: orange;
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(142, 92, 0);
+    border-color:rgba(255, 166, 0, 0.716);
+    color: white
 }
 
+
 #battery.critical {
-    color: red;
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(142, 0, 0);
+    border-color:rgba(255, 0, 0, 0.716);
+    color: white
 }
 
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
 }
 
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
 }
 
 #clock {
