@@ -33,6 +33,7 @@
         "network",
         "pulseaudio",
         "battery",
+        "niri/language",
         "clock#date",
         "clock#time"
     ],
@@ -47,10 +48,17 @@
         "format": "{icon} {percent}% ",
         "format-icons": {
             "default": ["󰃞", "󰃟", "󰃠"]
-        }
+        },
+        "on-scroll-down": "brightnessctl set 1%-",
+        "on-scroll-up": "brightnessctl set 1%+"
     },
 
-
+    "niri/language": {
+        "format": "   {short}"
+        // "format-ru": "ru-ru",
+        // "format-ca(multix)": "ca-fr",
+        // "format-ca(eng)": "ca-en"
+    },
 
 
 
@@ -60,8 +68,8 @@
     "battery": {
         "interval": 1,
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 20,
+            "critical": 10
         },
         // Connected to AC
         "format": "  {icon}  {capacity}%", // Icon: bolt
