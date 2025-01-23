@@ -8,13 +8,14 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
     keyboard {
+        track-layout "global"
         xkb {
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
-
+            
             // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            layout "ca(eng),ru,ca(multix)"
+            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
     }
 
@@ -25,7 +26,7 @@ input {
         dwt
         scroll-method "two-finger"
         click-method "clickfinger"
-        accel-profile "flat"
+        accel-profile "adaptive"
         accel-speed 0.3
         
     }
@@ -495,6 +496,7 @@ spawn-at-startup "xwayland-satellite"
 environment {
     DISPLAY ":1"
 }
+
 spawn-at-startup "lxpolkit"
 spawn-at-startup "~/.scripts/swaylock.sh"
 // spawn-at-startup "swayosd-server"
