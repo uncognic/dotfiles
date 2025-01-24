@@ -503,7 +503,7 @@ spawn-at-startup "~/.scripts/swaylock.sh"
 // spawn-at-startup "swaync"
 // spawn-at-startup "swaybg" "-i ~/Pictures/Vallpapers/wallhaven-3lmz2d.jpg"
 spawn-at-startup "waybar"
-spawn-at-startup "~/.scripts/swaybg.sh"
+// spawn-at-startup "~/.scripts/swaybg.sh"
 
 switch-events {
     lid-close { spawn "systemctl" "suspend"; }
