@@ -15,7 +15,7 @@
 
     "position": "top",
 
-    "margin": "5",
+    // "margin": "5",
     // If height property would be not present, it'd be calculated dynamically
     "height": 30,
 
