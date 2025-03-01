@@ -509,3 +509,7 @@ switch-events {
     lid-close { spawn "systemctl" "suspend"; }
 }
 
+window-rule {
+    match app-id="qview"
+    open-floating true
+}
