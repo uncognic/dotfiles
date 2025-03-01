@@ -10,7 +10,7 @@
  * Keyframes
  * -------------------------------------------------------------------------- */
 
- @keyframes blink-warning {
+/* @keyframes blink-warning {
     70% {
         color: white;
     }
@@ -30,9 +30,8 @@
         color: white;
         background-color: red;
     }
-}
-
-
+} 
+*/
 /* -----------------------------------------------------------------------------
  * Base styles
  * -------------------------------------------------------------------------- */
@@ -51,7 +50,7 @@
     background: #323232;
     color: white;
     font-family: monospace;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* Each module */
@@ -72,25 +71,26 @@
 #modules-left {
     padding-right: 5px;
 }
-
 /* -----------------------------------------------------------------------------
  * Module styles
  * -------------------------------------------------------------------------- */
 
 #battery {
-    animation-timing-function: linear;
+/*    animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate; */
+    padding-right: 0px;
 }
-
 #battery.warning {
     border-top: 2px solid transparent;
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(142, 92, 0);
-    border-color:rgba(255, 166, 0, 0.716);
-    color: white
+/*    background-color: rgb(142, 92, 0); 
+    border-color:rgba(255, 166, 0, 0.716); */
+    border-color: white;
+    color: white;
+    background-color: #323232;
 }
 
 
@@ -99,15 +99,11 @@
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(142, 0, 0);
-    border-color:rgba(255, 0, 0, 0.716);
-    color: white
-}
-
-#battery.warning.discharging {
-}
-
-#battery.critical.discharging {
+/*    background-color: rgb(142, 0, 0);
+    border-color:rgba(255, 0, 0, 0.716); */
+    border-color: red;
+    color: white;
+    background-color: #323232
 }
 
 #clock {
@@ -121,7 +117,7 @@
 #mpd.stopped {
 
 }
-
+/* 
 #mpd.paused {
     background-color: rgb(142, 92, 0);
     border-color:rgba(255, 166, 0, 0.716)
@@ -131,12 +127,14 @@
     background-color: #285577;
     border-color: #4c7899;
 }
-
+*/
 #mpd {
     border-top: 2px solid transparent;
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
+    border-color: white;
+
 }
 
 #cpu.warning {
@@ -175,7 +173,15 @@
 }
 
 #network.disconnected {
-    color: orange;
+    border-top: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+/*    background-color: rgb(142, 92, 0); 
+    border-color:rgba(255, 166, 0, 0.716); */
+    border-color: white;
+    color: white;
+    background-color: #323232;
 }
 
 #pulseaudio {
@@ -216,12 +222,12 @@
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
+    border-color: white;
     color: white;
-    background-color: #285577;
+   /* background-color: #285577; */
 }
 
 #workspaces button.urgent {
     border-color: #c9545d;
-    color: #c9545d;
+   /* color: #c9545d; */
 }
