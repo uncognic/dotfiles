@@ -17,23 +17,20 @@
 
     // "margin": "5",
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    "height": 25,
 
     "modules-left": [
         "niri/workspaces",
         "niri/mode",
         "mpd"
     ],
-    "modules-center": [
 
-    ],
     "modules-right": [
         "tray",
-        "backlight",
+        // "backlight",
         "network",
         "pulseaudio",
         "battery",
-        "niri/language",
         "clock#date",
         "clock#time"
     ],
@@ -45,25 +42,13 @@
 
     "backlight": {
         "interval": 1,
-        "format": "{icon} {percent}% ",
+        "format": "[ bright ] {percent}% ",
         "format-icons": {
             "default": ["󰃞", "󰃟", "󰃠"]
         },
         "on-scroll-down": "brightnessctl set 1%-",
         "on-scroll-up": "brightnessctl set 1%+"
     },
-
-    "niri/language": {
-        "format": "   {short}"
-        // "format-ru": "ru-ru",
-        // "format-ca(multix)": "ca-fr",
-        // "format-ca(eng)": "ca-en"
-    },
-
-
-
-
-
 
     "battery": {
         "interval": 1,
@@ -72,9 +57,9 @@
             "critical": 10
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%", // Icon: bolt
+        "format": "[ bat, charge ] {capacity}%", // Icon: bolt
         // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
+        "format-discharging": "[ bat ] {capacity}%",
         "format-icons": [
             "", // Icon: battery-full
             "", // Icon: battery-three-quarters
@@ -93,16 +78,16 @@
 
     "clock#date": {
       "interval": 1,
-      "format": " {:%e %b %Y}", // Icon: calendar-alt
+      "format": "{:%e %b %Y}", // Icon: calendar-alt
       "tooltip-format": "{:%e %B %Y}"
     },
 
 
     "network": {
         "interval": 5,
-        "format-wifi": " {signalStrength}%", // Icon: wifi
+        "format-wifi": "[ wi-fi ] {signalStrength}%", // Icon: wifi
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
-        "format-disconnected": "⚠  Disconnected",
+        "format-disconnected": "[ net ] disconnected",
         "tooltip-format": "{essid} ({signalStrength}%), {ifname}: {ipaddr}",
         "on-click": "nm-applet"
     },
@@ -118,9 +103,9 @@
     },
 
     "mpd": {
-    "format": " {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-    "format-disconnected": " Disconnected",
-    "format-stopped": " Stopped",
+    "format": "[ pause ] {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-disconnected": "[ disconnected ]",
+    "format-stopped": "[ stopped ]",
     "interval": 10,
     "consume-icons": {
         "n": " " // Icon shows only when "consume" is on
@@ -167,7 +152,7 @@
 
     "pulseaudio": {
         //"scroll-step": 1,
-        "format": "{icon} {volume}%",
+        "format": "[ vol ] {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
@@ -185,7 +170,7 @@
 
 
     "tray": {
-        "icon-size": 21,
+        "icon-size": 19,
         "spacing": 10
     }
 
