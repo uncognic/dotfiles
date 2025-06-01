@@ -56,9 +56,9 @@
             "critical": 10
         },
         // Connected to AC
-        "format": "[ bat, charge ] {capacity}%", // Icon: bolt
+        "format": "[ bat ] +{capacity}%", // Icon: bolt
         // Not connected to AC
-        "format-discharging": "[ bat ] {capacity}%",
+        "format-discharging": "[ bat ] -{capacity}%",
         "format-icons": [
             "", // Icon: battery-full
             "", // Icon: battery-three-quarters
