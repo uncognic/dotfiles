@@ -163,7 +163,7 @@
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol",
+        "on-click": "foot pulsemixer",
         "tooltip-format": "{volume}%"
     },
 
