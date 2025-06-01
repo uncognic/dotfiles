@@ -28,6 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
+exec_always --no-startup-id xset dpms 0 0 60
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 000000
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -45,7 +46,9 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+l exec i3lock -c 000000
-
+bindsym $mod+shift+s exec flameshot gui
+bindsym Print exec flameshot launcher
+bindsym shift+Print exec flameshot full
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -55,7 +58,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec kitty
 bindsym $mod+E exec thunar
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -160,8 +163,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Exit i3' 'i3-msg exit' -B 'Reboot' 'reboot' -B 'Shutdown' 'shutdown now'"
+ 
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -193,4 +196,4 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 exec polybar
 exec blueman-applet
-
+exec --no-startup-id "feh --bg-scale /home/ilyas/Pictures/Vallpapers/Landscapes/wallhaven-d8xw1l.jpg"
