@@ -197,3 +197,4 @@ bindsym $mod+r mode "resize"
 exec polybar
 exec blueman-applet
 exec --no-startup-id "feh --bg-scale /home/ilyas/Pictures/Vallpapers/Landscapes/wallhaven-d8xw1l.jpg"
+
