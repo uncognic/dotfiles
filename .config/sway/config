@@ -171,7 +171,7 @@ bindswitch lid:on exec systemctl suspend
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
-    bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy -t image/png
+
 #
 # Scratchpad:
 #
@@ -220,7 +220,13 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym $mod+shift+s exec flameshot gui
+    bindsym Print exec flameshot launcher
+    bindsym shift+Print exec flameshot full
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioPause exec playerctl pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
 #
 # Status Bar:
