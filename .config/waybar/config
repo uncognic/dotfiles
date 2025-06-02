@@ -28,11 +28,11 @@
     "modules-right": [
         "tray",
         // "backlight",
+        "disk",
         "pulseaudio",
         "battery",
         "clock#date",
-        "clock#time",
-        "disk"
+        "clock#time"
     ],
 
 
