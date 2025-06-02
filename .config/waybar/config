@@ -31,7 +31,8 @@
         "pulseaudio",
         "battery",
         "clock#date",
-        "clock#time"
+        "clock#time",
+        "disk"
     ],
 
 
@@ -166,7 +167,9 @@
         "on-click": "foot pulsemixer",
         "tooltip-format": "{volume}%"
     },
-
+   "disk": {
+   	"format": "[ / ] {percentage_used}%"
+   }
 
     "tray": {
         "icon-size": 19,
