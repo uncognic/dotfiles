@@ -168,8 +168,8 @@
         "tooltip-format": "{volume}%"
     },
    "disk": {
-   	"format": "[ / ] {percentage_used}%"
-   }
+   	"format": "[ / ] {percentage_used}% "
+   },
 
     "tray": {
         "icon-size": 19,
