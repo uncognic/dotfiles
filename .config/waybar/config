@@ -153,12 +153,12 @@
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "[ vol ] {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "[ mute ]",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
+            "headphones": "[ hp ]",
+            "handsfree": "[ hp ]",
+            "headset": "[ hp ]",
             "phone": "",
             "portable": "",
             "car": "",
